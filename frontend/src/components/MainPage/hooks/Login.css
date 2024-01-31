@@ -106,7 +106,6 @@
 .Login .numbers .number {
     width: 32%;
     padding: .5rem;
-    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
     color: var(--white1);
     margin: 2px;
     cursor: pointer;
