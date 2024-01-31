@@ -24,7 +24,7 @@ const Login = () => {
         <div className='input c'>
           <input 
             className={`${niki100PassLogin.length === 5 && 'correct'}`}
-            type="text"
+            type="number"
             value={niki100PassLogin}
             onChange={(e) => handleForm(e)}
             placeholder='' 
