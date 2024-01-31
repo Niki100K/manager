@@ -48,6 +48,8 @@ input:-webkit-autofill:active{
 }
 input {
   outline: none;
+  background: transparent;
+  border: none;
 }
 label {
   pointer-events: none;

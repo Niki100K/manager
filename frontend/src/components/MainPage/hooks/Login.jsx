@@ -1,53 +1,21 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React from 'react'
+import { Link } from 'react-router-dom'
 import './Login.css'
-import { useDispatch } from 'react-redux'
+import LoginJS from './LoginJS'
 const Login = () => {
-  const dispatch = useDispatch()
-  const [password, setPassword] = useState('')
-  const handleForm = (e) => {
-    if (typeof e === 'object') {
-      let value = e.target.value
-      value = value.replace(/\D/g, '')
-      value = value.length > 4 ? value.slice(0, 4) : value
-      setPassword(value)
-    } else {
-      
-      setPassword((prev) => (prev.length < 4 ? prev + e : prev));
-    }
-  }
-  const [incorrectPass, setIncorrectPass] = useState(false)
-  const handleLogin = useCallback((e) => {
-    if (e) {
-      e.preventDefault()
-    }
-    if (password.length === 4) {
-      setIncorrectPass(false)
-      dispatch({
-        type: 'SET_USER'
-      })
-    } else {
-      setIncorrectPass(true)
-      dispatch({
-        type: 'UNSET_USER'
-      })
-    }
-  }, [dispatch, password.length])
-  const handleClear = () => {
-    setPassword('')
-  }
-  const handleRemoveLastSymbol = () => {
-    setPassword(prev => prev.slice(0, -1))
-  }
-  useEffect(() => {
-    if (password.length === 4) {
-      handleLogin()
-    }
-  }, [handleLogin, password.length])
-  const numbers = '1234567890'
+  const {
+    password,
+    handleForm,
+    numbers,
+    incorrectPass,
+    handleLogin,
+    handleClear,
+    handleRemoveLastSymbol,
+  } = LoginJS()
   return (
     <div className='Login c r flex-c'>
       <div className='head c'>
-        <h2>Login</h2>
+        <h2><Link to={'register'}>Register</Link></h2>
         <p>Manager</p>
       </div>
       <form className='c flex-c' onSubmit={handleLogin} action="">

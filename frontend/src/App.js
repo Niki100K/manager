@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 
-import { MainPage } from './components'
+import { MainPage, Register } from './components'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import { UserData } from './redux/UserData'
@@ -21,6 +21,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<MainPage />} />
+          <Route path='/register' element={<Register />} />
         </Routes>
       </BrowserRouter>
     </Provider>

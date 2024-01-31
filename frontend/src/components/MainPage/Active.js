@@ -5,7 +5,7 @@ const Active = () => {
     const [data, setData] = useState([])
     useEffect(() => {
         if (renderLimit.current) {
-            setData([{},{},{},{},{},{},{},{},{},{},{}])
+            setData([{},{},{},{},{},{},{},{},{},{},{},])
             renderLimit.current = false
         }
     }, [renderLimit, data])

@@ -10,8 +10,9 @@
     margin-bottom: 1rem;
     padding: 0 .5rem;
 }
-.Login .head h2 {
+.Login .head h2 a {
     color: var(--white1);
+    text-decoration: none;
 }
 .Login .head p {
     color: var(--light2);
