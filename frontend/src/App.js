@@ -1,15 +1,29 @@
 import React from 'react'
+import './App.css'
+
 import { MainPage } from './components'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import './App.css'
+import { UserData } from './redux/UserData'
+
+import { configureStore } from '@reduxjs/toolkit'
+import { Provider } from 'react-redux'
+
+const store = configureStore({
+  reducer: {
+    UserData
+  }
+})
+
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<MainPage />} />
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<MainPage />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   )
 }
 

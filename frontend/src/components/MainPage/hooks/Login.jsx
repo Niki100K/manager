@@ -1,36 +1,49 @@
-import React, { useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import './Login.css'
+import { useDispatch } from 'react-redux'
 const Login = () => {
-  const [niki100PassLogin, setNiki100PassLogin] = useState('')
+  const dispatch = useDispatch()
+  const [password, setPassword] = useState('')
   const handleForm = (e) => {
     if (typeof e === 'object') {
       let value = e.target.value
       value = value.replace(/\D/g, '')
-      value = value.length > 5 ? value.slice(0, 5) : value
-      setNiki100PassLogin(value)
+      value = value.length > 4 ? value.slice(0, 4) : value
+      setPassword(value)
     } else {
       
-      setNiki100PassLogin((prev) => (prev.length < 5 ? prev + e : prev));
+      setPassword((prev) => (prev.length < 4 ? prev + e : prev));
     }
   }
   const [incorrectPass, setIncorrectPass] = useState(false)
-  const handleLogin = (e) => {
-    e.preventDefault()
-    if (niki100PassLogin.length === 5) {
+  const handleLogin = useCallback((e) => {
+    if (e) {
+      e.preventDefault()
+    }
+    if (password.length === 4) {
       setIncorrectPass(false)
+      dispatch({
+        type: 'SET_USER'
+      })
     } else {
       setIncorrectPass(true)
+      dispatch({
+        type: 'UNSET_USER'
+      })
     }
-  }
+  }, [dispatch, password.length])
   const handleClear = () => {
-    setNiki100PassLogin('')
+    setPassword('')
   }
   const handleRemoveLastSymbol = () => {
-    setNiki100PassLogin(prev => prev.slice(0, -1))
+    setPassword(prev => prev.slice(0, -1))
   }
-  const numbers = [
-    '1234567890'
-  ]
+  useEffect(() => {
+    if (password.length === 4) {
+      handleLogin()
+    }
+  }, [handleLogin, password.length])
+  const numbers = '1234567890'
   return (
     <div className='Login c r flex-c'>
       <div className='head c'>
@@ -40,9 +53,9 @@ const Login = () => {
       <form className='c flex-c' onSubmit={handleLogin} action="">
         <div className='input c'>
           <input 
-            className={`${niki100PassLogin.length === 5 && 'correct'}`}
-            type="number"
-            value={niki100PassLogin}
+            className={`${password.length === 4 && 'correct'}`}
+            type="text"
+            value={password}
             onChange={(e) => handleForm(e)}
             placeholder='' 
             required
@@ -51,11 +64,11 @@ const Login = () => {
         </div>
         {incorrectPass &&
           <div className='error c r'>
-            <p>Password is less then 5 symbols.</p>
+            <p>Password is less then 4 symbols.</p>
           </div>
         }
         <div className='numbers c'>
-          {numbers[0].split('').map((info, index) => (
+          {numbers.split('').map((info, index) => (
             <React.Fragment key={index}>
               <div onClick={() => handleForm(info)} className='number c r'>
                 <h1>{info}</h1>
