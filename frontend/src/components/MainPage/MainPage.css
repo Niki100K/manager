@@ -1,3 +1,13 @@
 .MainPage {
     margin-top: 10rem;
 }
+@media (max-width: 640px) {
+    .MainPage {
+        margin-top: 4rem;
+    }
+}
+@media (max-width: 440px) {
+    .MainPage {
+        margin-top: 2rem;
+    }
+}

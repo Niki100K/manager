@@ -19,7 +19,11 @@ const Login = () => {
   }
   return (
     <div className='Login c r flex-c'>
-      <header>Niki100 Manager</header>
+      <div className='head c'>
+        <h2>Niki100</h2>
+        <p>Manager</p>
+      </div>
+      <header className='c'>Login</header>
       <form className='c flex-c' onSubmit={handleLogin} action="">
         <div className='input c'>
           <input 

@@ -1,17 +1,33 @@
 .Login {
     max-width: 1200px;
-    height: 300px;
     background: var(--middle1);
     margin: .5rem;
-    padding: 4px;
+    padding: .5rem 4px 2rem;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
 }
+.Login .head {
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.Login .head h2 {
+    color: var(--white1);
+}
+.Login .head p {
+    color: var(--light2);
+    text-decoration: underline;
+}
+
 .Login header {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    background: var(--light3);
+    color: var(--white1);
+    margin-bottom: .5rem;
 }
 .Login .input {
     position: relative;
     max-width: 400px;
-    margin: 2rem 0 0;
 }
 .Login .input input {
     width: 100%;
