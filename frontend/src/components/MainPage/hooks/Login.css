@@ -18,17 +18,10 @@
     text-decoration: underline;
 }
 
-.Login header {
-    font-size: 1.5rem;
-    padding: .5rem;
-    border-radius: .5rem;
-    background: var(--light3);
-    color: var(--white1);
-    margin-bottom: 2rem;
-}
 .Login .input {
     position: relative;
     max-width: 400px;
+    margin-top: 1rem;
 }
 .Login .input input {
     width: 100%;
@@ -88,13 +81,12 @@
 
 .Login .error {
     justify-content: center;
-    background: var(--light3);
     padding: .5rem;
-    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
-    margin-bottom: 4px;
+    margin: .5rem 0 4px;
 }
 .Login .error p {
-    color: var(--white1);
+    color: var(--light3);
+    text-decoration: underline;
     font-size: 20px;
 }
 
@@ -110,9 +102,9 @@
     margin: 2px;
     cursor: pointer;
 }
-.Login .numbers .number:last-child {
-    width: 100%;
-    margin-top: .5rem;
+.Login .numbers .number.del {
+    font-family: var(--font2);
+    border-radius: .5rem;
 }
 .Login .numbers .number:hover {
     background: var(--dark5);
@@ -121,5 +113,13 @@
 @media (max-width: 480px) {
     .Login .numbers {
         display: flex;
+    }
+}
+@media (max-width: 340px) {
+    .Login .numbers .number {
+        width: 30%;
+    }
+    .Login .error p {
+        font-size: 1rem;
     }
 }

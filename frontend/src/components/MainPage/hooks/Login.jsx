@@ -10,7 +10,7 @@ const Login = () => {
       setNiki100PassLogin(value)
     } else {
       
-      setNiki100PassLogin(niki100PassLogin.length < 5 ? niki100PassLogin + e : niki100PassLogin)
+      setNiki100PassLogin((prev) => (prev.length < 5 ? prev + e : prev));
     }
   }
   const [incorrectPass, setIncorrectPass] = useState(false)
@@ -22,16 +22,21 @@ const Login = () => {
       setIncorrectPass(true)
     }
   }
+  const handleClear = () => {
+    setNiki100PassLogin('')
+  }
+  const handleRemoveLastSymbol = () => {
+    setNiki100PassLogin(prev => prev.slice(0, -1))
+  }
   const numbers = [
     '1234567890'
   ]
   return (
     <div className='Login c r flex-c'>
       <div className='head c'>
-        <h2>Niki100</h2>
+        <h2>Login</h2>
         <p>Manager</p>
       </div>
-      <header className='c'>Login</header>
       <form className='c flex-c' onSubmit={handleLogin} action="">
         <div className='input c'>
           <input 
@@ -51,9 +56,21 @@ const Login = () => {
         }
         <div className='numbers c'>
           {numbers[0].split('').map((info, index) => (
-            <div onClick={() => handleForm(info)} className='number c r' key={index}>
-              <h1>{info}</h1>
-            </div>
+            <React.Fragment key={index}>
+              <div onClick={() => handleForm(info)} className='number c r'>
+                <h1>{info}</h1>
+              </div>
+              {index === 8 && (
+                <div onClick={handleClear} className='number del c r'>
+                  Del
+                </div>
+              )}
+              {index === 9 && (
+                <div onClick={handleRemoveLastSymbol} className='number c r'>
+                  &lt;-
+                </div>
+              )}
+            </React.Fragment>
           ))}
         </div>
         <div className='btn c'>
