@@ -8,6 +8,7 @@
 .Login .head {
     justify-content: space-between;
     margin-bottom: 1rem;
+    padding: 0 .5rem;
 }
 .Login .head h2 {
     color: var(--white1);
@@ -23,7 +24,7 @@
     border-radius: .5rem;
     background: var(--light3);
     color: var(--white1);
-    margin-bottom: .5rem;
+    margin-bottom: 2rem;
 }
 .Login .input {
     position: relative;
