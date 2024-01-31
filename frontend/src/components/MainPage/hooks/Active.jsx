@@ -7,16 +7,16 @@ const Active = () => {
   const {data} = ActiveJS()
   const handleWidth = useCallback(() => {
     let width = cardsRef.current.clientWidth
-    if (window.innerWidth > 640) {
+    if (window.innerWidth > 840) {
       setCardWidth(width / 5.4)
     }
-    if (window.innerWidth <= 640) {
+    if (window.innerWidth <= 840) {
       setCardWidth(width / 4.4)
     }
-    if (window.innerWidth <= 440) {
+    if (window.innerWidth <= 640) {
       setCardWidth(width / 3.1)
     }
-    if (window.innerWidth <= 340) {
+    if (window.innerWidth <= 440) {
       setCardWidth(width / 2.1)
     }
   }, [])
