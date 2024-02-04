@@ -1,0 +1,69 @@
+.Login {
+    margin-top: 10rem;
+}
+.Login .con {
+    max-width: 800px;
+    padding: .5rem .5rem 2rem;
+    margin: 0 .5rem;
+    background: var(--middle1);
+}
+.Login .con header {
+    justify-content: space-between;
+    padding: .5rem;
+}
+.Login .con header h2 a {
+    text-decoration: none;
+    color: var(--white1);
+}
+.Login .con header p a {
+    color: var(--dark1);
+}
+
+.Login .con form {
+    max-width: 400px;
+    margin-top: 2rem;
+}
+.Login .con form .input {
+    position: relative;
+}
+.Login .con form .input input {
+    width: 100%;
+    color: var(--white1);
+    border: 2px solid var(--dark1);
+    border-radius: .5rem;
+    font-size: 2.5rem;
+    padding: .5rem 4px 4px;
+    text-align: center;
+}
+.Login .con form .input label {
+    position: absolute;
+    font-size: 2.5rem;
+    transition: .4s;
+}
+.Login .con form .input input:focus + label,
+.Login .con form .input input:not(:placeholder-shown) + label {
+    transform: translateY(-150%);
+    font-size: 1.5rem;
+}
+
+.Login .con form .numbers {
+    display: none;
+    flex-wrap: wrap;
+}
+.Login .con form .numbers .number {
+    width: 30%;
+    margin: 4px;
+    font-size: 2rem;
+    color: var(--white1);
+    padding: 4px 0;
+    transition: .4s;
+    cursor: pointer;
+}
+.Login .con form .numbers .number:hover {
+    background: var(--dark1);
+}
+@media (max-width: 540px) {
+    .Login .con form .numbers {
+        display: flex;
+    }
+}

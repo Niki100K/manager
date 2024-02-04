@@ -1,0 +1,67 @@
+.Main .nav {
+    justify-content: space-between;
+    padding: 0 .5rem;
+    margin-bottom: 2rem;
+    background: var(--middle1);
+}
+.Main .nav h2 {
+    color: var(--white1);
+    font-size: 2rem;
+}
+.Main .nav p {
+    color: var(--dark1);
+}
+.Main .categories {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: .5rem;
+}
+.Main .categories .category {
+    max-width: 190px;
+    padding: .5rem 0 0;
+    margin: 4px;
+    text-decoration: none;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: .4s;
+}
+.Main .categories .category:hover {
+    transform: translateY(-2%);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.Main .categories .category .img {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    transition: .4s;
+    cursor: pointer;
+}
+.Main .categories .category:hover .img {
+    transform: scale(1.1);
+}
+.Main .categories .category .text {
+    background: var(--light1);
+    padding: .5rem 4px;
+}
+.Main .categories .category .text h2 {
+    color: var(--white1);
+    font-family: var(--font4);
+}
+
+
+
+@media (max-width: 840px) {
+    .Main .categories .category {
+        max-width: unset;
+        width: 30%;
+    }
+}
+@media (max-width: 440px) {
+    .Main .categories .category {
+        max-width: unset;
+        width: 48%;
+        margin: 0 0 1rem;
+    }
+    .Main .categories .category .text h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+}

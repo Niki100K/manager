@@ -1,10 +1,11 @@
 import React from 'react'
 import './App.css'
 
-import { MainPage, Register } from './components'
+import { Category, MainPage, Register } from './components'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import { UserData } from './redux/UserData'
+import { StoreProvider } from './Store'
 
 import { configureStore } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux'
@@ -18,12 +19,15 @@ const store = configureStore({
 const App = () => {
   return (
     <Provider store={store}>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<MainPage />} />
-          <Route path='/register' element={<Register />} />
-        </Routes>
-      </BrowserRouter>
+      <StoreProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<MainPage />} />
+            <Route path='/register' element={<Register />} />
+            <Route path='/:category' element={<Category />} />
+          </Routes>
+        </BrowserRouter>
+      </StoreProvider>
     </Provider>
   )
 }

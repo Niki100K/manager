@@ -1,0 +1,32 @@
+{
+    "Categories": [
+        {
+            "name": "Drinks",
+            "img": "Drinks"
+        },
+        {
+            "name": "Alcohol",
+            "img": "Alcohol"
+        },
+        {
+            "name": "Starters",
+            "img": "Starters"
+        },
+        {
+            "name": "Main dishes",
+            "img": "Dishes"
+        },
+        {
+            "name": "Pizza",
+            "img": "Pizza"
+        },
+        {
+            "name": "Desserts",
+            "img": "Desserts"
+        },
+        {
+            "name": "Coffee and tea",
+            "img": "Coffee"
+        }
+    ]
+}

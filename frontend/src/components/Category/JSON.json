@@ -1,0 +1,752 @@
+{
+    "Drinks": [
+        {
+            "Item": [
+                {
+                    "name": "Water",
+                    "img": "water500.png",
+                    "price": "0.99",
+                    "volume": "500ml",
+                    "description": "Purified drinking water"
+                },
+                {
+                    "name": "Water",
+                    "img": "water1500.png",
+                    "price": "1.99",
+                    "volume": "1500ml",
+                    "description": "Purified drinking water"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Coca-Cola",
+                    "img": "coca-cola500.png",
+                    "price": "2.99",
+                    "volume": "500ml",
+                    "description": "Classic Coca-Cola"
+                },
+                {
+                    "name": "Coca-Cola",
+                    "img": "coca-cola1500.png",
+                    "price": "4.99",
+                    "volume": "1500ml",
+                    "description": "Classic Coca-Cola"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Fanta",
+                    "img": "fanta500.png",
+                    "price": "2.99",
+                    "volume": "500ml",
+                    "description": "Orange flavored soda"
+                },
+                {
+                    "name": "Fanta",
+                    "img": "fanta1500.png",
+                    "price": "4.99",
+                    "volume": "1500ml",
+                    "description": "Orange flavored soda"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Tonic",
+                    "img": "tonic.png",
+                    "price": "4.99",
+                    "volume": "500ml",
+                    "description": "Tonic water for mixing"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Orange Juice",
+                    "img": "orange-juice.png",
+                    "price": "3.99",
+                    "volume": "500ml",
+                    "description": "Freshly squeezed orange juice"
+                },
+                {
+                    "name": "Apple Juice",
+                    "img": "apple-juice.png",
+                    "price": "3.99",
+                    "volume": "500ml",
+                    "description": "100% pure apple juice"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Sprite",
+                    "img": "sprite.png",
+                    "price": "3.99",
+                    "volume": "500ml",
+                    "description": "Lemon-lime flavored soda"
+                }
+            ]
+        }
+    ],
+    "Alcohol": [
+        {
+            "Item": [
+                {
+                    "name": "Absolute",
+                    "img": "absolut.png",
+                    "price": "19.99",
+                    "volume": "1500ml",
+                    "description": "Premium vodka"
+                },
+                {
+                    "name": "Ruski",
+                    "img": "ruski.png",
+                    "price": "14.99",
+                    "volume": "1500ml",
+                    "description": "Russian vodka"
+                },
+                {
+                    "name": "Grey Goose",
+                    "img": "gray-goose.png",
+                    "price": "34.99",
+                    "volume": "1500ml",
+                    "description": "High-quality French vodka"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Ariana",
+                    "img": "ariana.png",
+                    "price": "3.99",
+                    "volume": "500ml",
+                    "description": "Local beer brand"
+                },
+                {
+                    "name": "Hainiken",
+                    "img": "hainiken.png",
+                    "price": "5.99",
+                    "volume": "500ml",
+                    "description": "Imported beer"
+                },
+                {
+                    "name": "Pirinsko",
+                    "img": "pirinsko.png",
+                    "price": "2.99",
+                    "volume": "500ml",
+                    "description": "Bulgarian beer"
+                },
+                {
+                    "name": "Corona",
+                    "img": "corona.png",
+                    "price": "5.99",
+                    "volume": "500ml",
+                    "description": "Mexican beer"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Chardonnay",
+                    "img": "Chardonnay.png",
+                    "price": "14.99",
+                    "volume": "1500ml",
+                    "description": "White wine"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Jack Daniels",
+                    "img": "jack-daniels.png",
+                    "price": "19.99",
+                    "volume": "1500ml",
+                    "description": "Tennessee whiskey"
+                },
+                {
+                    "name": "Jameson",
+                    "img": "jameson.png",
+                    "price": "14.99",
+                    "volume": "1500ml",
+                    "description": "Irish whiskey"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Johnnie Black",
+                    "img": "johnnie-walker-black-label-12.png",
+                    "price": "34.99",
+                    "volume": "1500ml",
+                    "description": "Scotch whisky"
+                },
+                {
+                    "name": "Johnnie Blue",
+                    "img": "johnnie-walker-blue-label.png",
+                    "price": "59.99",
+                    "volume": "1500ml",
+                    "description": "Premium Scotch whisky"
+                },
+                {
+                    "name": "Johnnie Red",
+                    "img": "johnnie-walker-red-label.png",
+                    "price": "29.99",
+                    "volume": "1500ml",
+                    "description": "Blended Scotch whisky"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Martini",
+                    "img": "martini.png",
+                    "price": "7.99",
+                    "volume": "250ml",
+                    "description": "Italian vermouth"
+                },
+                {
+                    "name": "Mojito",
+                    "img": "Mojito.png",
+                    "price": "4.99",
+                    "volume": "250ml",
+                    "description": "Cuban cocktail"
+                },
+                {
+                    "name": "Campari Tonic",
+                    "img": "Campari tonic.png",
+                    "price": "7.99",
+                    "volume": "250ml",
+                    "description": "Bitter aperitif"
+                }
+            ]
+        }
+    ],
+    "Starters": [
+        {
+            "Item": [
+                {
+                    "name": "Pumpkin Soup",
+                    "img": "Pumpkin soup.png",
+                    "price": "3.99",
+                    "volume": "500g",
+                    "description": "Creamy pumpkin soup"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Caprese Salad",
+                    "img": "Caprese-Salad.png",
+                    "price": "3.99",
+                    "volume": "500g",
+                    "description": "Tomato and mozzarella salad"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Calamari",
+                    "img": "Calamari.png",
+                    "price": "4.99",
+                    "volume": "500g",
+                    "description": "Fried squid rings"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Avocado Tartare",
+                    "img": "avocado-tartare.png",
+                    "price": "6.99",
+                    "volume": "500g",
+                    "description": "Chopped avocado dish"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Cheese and Spinach Croquettes",
+                    "img": "Cheese and spinach croquettes.png",
+                    "price": "6.99",
+                    "volume": "500g",
+                    "description": "Deep-fried appetizer"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Bruschetta with Ricotta",
+                    "img": "Bruschetta with ricotta.png",
+                    "price": "6.99",
+                    "volume": "500g",
+                    "description": "Toasted bread with ricotta topping"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Grilled Shrimp",
+                    "img": "Grilled shrimp.png",
+                    "price": "6.99",
+                    "volume": "500g",
+                    "description": "Succulent grilled shrimp"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Caprese Burgers",
+                    "img": "Caprese burgers.png",
+                    "price": "6.99",
+                    "volume": "500g",
+                    "description": "Burgers with tomato and mozzarella"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Onion Rings",
+                    "img": "Onion rings.png",
+                    "price": "6.99",
+                    "volume": "500g",
+                    "description": "Crispy fried onion rings"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Steamed Clams",
+                    "img": "Steam clams.png",
+                    "price": "6.99",
+                    "volume": "500g",
+                    "description": "Freshly steamed clams"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Summer Salad",
+                    "img": "Summer salad.png",
+                    "price": "6.99",
+                    "volume": "500g",
+                    "description": "Light and refreshing summer salad"
+                }
+            ]
+        }
+    ],   
+    "Main dishes": [
+        {
+            "Item": [
+                {
+                    "name": "Ribeye Steak",
+                    "img": "Ribeye Steak.png",
+                    "price": "3.99",
+                    "volume": "500g",
+                    "description": "Juicy ribeye steak"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Spaghetti Bolognese",
+                    "img": "Spaghetti Bolognese.png",
+                    "price": "3.99",
+                    "volume": "500g",
+                    "description": "Classic Italian pasta dish"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Salmon with Spinach",
+                    "img": "Salmon with Spinach.png",
+                    "price": "4.99",
+                    "volume": "500g",
+                    "description": "Grilled salmon with sautéed spinach"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Veal Marsala",
+                    "img": "Veal Marsala.png",
+                    "price": "6.99",
+                    "volume": "500g",
+                    "description": "Veal in Marsala wine sauce"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Chicken Curry",
+                    "img": "Chicken Curry.png",
+                    "price": "6.99",
+                    "volume": "500g",
+                    "description": "Spicy chicken curry"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Roast Duck",
+                    "img": "Roast Duck.png",
+                    "price": "6.99",
+                    "volume": "500g",
+                    "description": "Crispy roast duck"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Paella with Prawns",
+                    "img": "Paella with Prawns.png",
+                    "price": "6.99",
+                    "volume": "500g",
+                    "description": "Spanish paella with prawns"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Roast Lamb",
+                    "img": "Roast Lamb.png",
+                    "price": "6.99",
+                    "volume": "500g",
+                    "description": "Slow-roasted lamb"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Ravioli with Ricotta and Spinach",
+                    "img": "Ravioli with Ricotta and Spinach.png",
+                    "price": "6.99",
+                    "volume": "500g",
+                    "description": "Stuffed pasta with ricotta and spinach"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Tagliatelle with Goat Cheese",
+                    "img": "Tagliatelle with Goat Cheese.png",
+                    "price": "6.99",
+                    "volume": "500g",
+                    "description": "Italian pasta with goat cheese"
+                }
+            ]
+        }
+    ],
+    "Pizza": [
+        {
+            "Item": [
+                {
+                    "name": "Margherita",
+                    "img": "Margherita.png",
+                    "price": "8.99",
+                    "volume": "500g",
+                    "description": "Classic margherita pizza"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Pepperoni",
+                    "img": "Pepperoni.png",
+                    "price": "9.99",
+                    "volume": "500g",
+                    "description": "Pizza with spicy pepperoni"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Vegetarian",
+                    "img": "Vegetarian.png",
+                    "price": "9.99",
+                    "volume": "500g",
+                    "description": "Pizza loaded with fresh vegetables"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Quattro Formaggi",
+                    "img": "Quattro Formaggi.png",
+                    "price": "10.99",
+                    "volume": "500g",
+                    "description": "Four cheese pizza"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Seafood Delight",
+                    "img": "Seafood Delight.png",
+                    "price": "11.99",
+                    "volume": "500g",
+                    "description": "Pizza with a variety of seafood"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "BBQ Chicken",
+                    "img": "BBQ Chicken.png",
+                    "price": "10.99",
+                    "volume": "500g",
+                    "description": "Barbecue chicken pizza"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Hawaiian",
+                    "img": "Hawaiian.png",
+                    "price": "9.99",
+                    "volume": "500g",
+                    "description": "Pizza with ham and pineapple"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Pesto Delight",
+                    "img": "Pesto Delight.png",
+                    "price": "10.99",
+                    "volume": "500g",
+                    "description": "Pizza with pesto sauce"
+                }
+            ]
+        }
+    ],
+    "Desserts": [
+        {
+            "Item": [
+                {
+                    "name": "Tiramisu",
+                    "img": "Tiramisu.png",
+                    "price": "4.99",
+                    "volume": "250g",
+                    "description": "Classic Italian dessert"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Chocolate Cake",
+                    "img": "Chocolate Mousse.png",
+                    "price": "4.99",
+                    "volume": "250g",
+                    "description": "Rich and moist chocolate cake"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Cheesecake",
+                    "img": "Cheesecake.png",
+                    "price": "4.99",
+                    "volume": "250g",
+                    "description": "Creamy and delicious cheesecake"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Fruit Sorbet",
+                    "img": "Fruit Sorbet.png",
+                    "price": "4.99",
+                    "volume": "250g",
+                    "description": "Refreshing fruit sorbet"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Apple Pie",
+                    "img": "Apple Pie.png",
+                    "price": "4.99",
+                    "volume": "250g",
+                    "description": "Homemade apple pie"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Strawberry Shortcake",
+                    "img": "Strawberry Shortcake.png",
+                    "price": "4.99",
+                    "volume": "250g",
+                    "description": "Delicious strawberry shortcake"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Panna Cotta",
+                    "img": "Panna Cotta.png",
+                    "price": "4.99",
+                    "volume": "250g",
+                    "description": "Italian dessert with sweetened cream"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Lemon Sorbet",
+                    "img": "Lemon Sorbet.png",
+                    "price": "4.99",
+                    "volume": "250g",
+                    "description": "Zesty lemon-flavored sorbet"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Molten Chocolate Lava Cake",
+                    "img": "Molten Chocolate Lava Cake.png",
+                    "price": "5.99",
+                    "volume": "250g",
+                    "description": "Decadent chocolate lava cake"
+                }
+            ]
+        }
+    ],
+    "Coffee and tea": [
+        {
+            "Item": [
+                {
+                    "name": "Espresso",
+                    "img": "Espresso.png",
+                    "price": "2.99",
+                    "volume": "Single shot",
+                    "description": "Strong and concentrated coffee"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Cappuccino",
+                    "img": "Cappuccino.png",
+                    "price": "4.49",
+                    "volume": "250ml",
+                    "description": "Coffee with frothy milk and a sprinkle of cocoa"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Latte",
+                    "img": "Latte.png",
+                    "price": "4.99",
+                    "volume": "300ml",
+                    "description": "Creamy coffee with a generous amount of steamed milk"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Americano",
+                    "img": "Americano.png",
+                    "price": "3.49",
+                    "volume": "300ml",
+                    "description": "Diluted espresso with hot water"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Mocha",
+                    "img": "Mocha.png",
+                    "price": "5.49",
+                    "volume": "300ml",
+                    "description": "Chocolate-flavored coffee with steamed milk and whipped cream"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Affogato",
+                    "img": "Affogato.png",
+                    "price": "4.99",
+                    "volume": "Single shot",
+                    "description": "Espresso shot poured over a scoop of vanilla ice cream"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Chai Latte",
+                    "img": "Chai Latte.png",
+                    "price": "5.49",
+                    "volume": "300ml",
+                    "description": "Spiced tea with steamed milk"
+                }
+            ]
+        },
+        {
+            "Item": [
+                {
+                    "name": "Green Tea",
+                    "img": "Green Tea.png",
+                    "price": "2.99",
+                    "volume": "250ml",
+                    "description": "Refreshing green tea"
+                }
+            ]
+        }
+    ]
+}

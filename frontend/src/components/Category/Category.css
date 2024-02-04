@@ -1,0 +1,225 @@
+.Category {
+    margin-top: 10rem;
+    padding: 0 .5rem;
+}
+.Category .con {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.Category .con .item {
+    max-width: 18%;
+    margin: 1rem 4px;
+}
+.Category .con .item .swiper-wrapper {
+    padding: .5rem 0;
+}
+.Category .con .item strong {
+    font-size: 2rem;
+}
+.Category .con .item .swiper-button-prev,
+.Category .con .item .swiper-button-next {
+    width: 50px;
+    height: 50px;
+    border-radius: 1rem;
+    background: var(--dark4);
+    color: var(--light4);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.Category .con .item .swiper-button-prev::after,
+.Category .con .item .swiper-button-next::after {
+    font-size: 2rem;
+}
+.Category .con .item .type {
+    background: var(--middle4);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.Category .con .item .type .text {
+    align-items: flex-start;
+    height: 75px;
+    max-height: 75px;
+    padding: .5rem 4px;
+    background: var(--light4);
+    color: var(--dark4);
+    overflow: auto;
+}
+.Category .con .item .type .text::-webkit-scrollbar {
+    display: none;
+}
+.Category .con .item .type .img {
+    position: relative;
+    min-height: 250px;
+    padding: 1rem .5rem;
+}
+.Category .con .item .type .img .description {
+    position: absolute;
+    bottom: 0;
+    justify-content: space-between;
+    padding: 4px;
+    color: var(--white1);
+    font-family: var(--font4);
+}
+.Category .con .item .type .img .description p {
+    background: var(--light3);
+    padding: 4px .5rem;
+    border-radius: .5rem;
+}
+.Category .con .item .type .img .description span {
+    background: var(--light2);
+    color: var(--dark4);
+    padding: 4px .5rem;
+    border-radius: .5rem;
+}
+.Category .con .item .type .img strong {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: .5rem;
+    background: var(--light3);
+    color: var(--dark4);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.Category .con .item .type .manage {
+    background: var(--dark4);
+    padding: 4px 0;
+}
+.Category .con .item .type .manage .btn {
+    margin: 4px 0;
+}
+.Category .con .item .type .manage .btn button {
+    width: 100%;
+    margin: 0 4px;
+    background: var(--light4);
+    color: var(--white4);
+    opacity: .6;
+    cursor: default;
+}
+.Category .con .item .type .manage .btn button.active {
+    opacity: 1;
+    cursor: pointer;
+    color: var(--white1);
+}
+
+@media (Max-width: 1440px) {
+    .Category .con .item {
+        max-width: 23%;
+    }
+}
+@media (Max-width: 1040px) {
+    .Category .con .item {
+        max-width: 31%;
+    }
+}
+@media (Max-width: 740px) {
+    .Category .con .item {
+        max-width: 48%;
+    }
+}
+@media (Max-width: 580px) {
+    .Category .con .item {
+        max-width: 47%;
+    }
+
+    .Category .con .item .type .text {
+        padding: 4px;
+        max-height: 50px;
+    }
+    .Category .con .item .type .text strong {
+        font-size: 20px;
+    }
+
+    .Category .con .item .type .img {
+        padding: .5rem 4px;
+    }
+    .Category .con .item .type .img strong {
+        font-size: 1.5rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    .Category .con .item .swiper-button-prev,
+    .Category .con .item .swiper-button-next {
+        position: absolute;
+        top: 30%;
+        width: 40px;
+        height: 40px;
+    }
+    .Category .con .item .swiper-button-prev::after,
+    .Category .con .item .swiper-button-next::after {
+        font-size: 1.5rem;
+    }
+
+    .Category .con .item .type .manage .btn button {
+        font-size: 1rem;
+        padding: 4px;
+    }
+}
+@media (max-width: 480px) {
+    .Category .con .item {
+        margin: .5rem 0;
+    }
+    .Category .con .item {
+        max-width: 49%;
+    }
+    .Category .con .item .type .img .description p {
+        padding: 2px 4px;
+        font-size: 1rem;
+    }
+    .Category .con .item .type .img .description span {
+        padding: 2px 4px;
+    }
+
+    .Category .con .item .swiper-button-prev,
+    .Category .con .item .swiper-button-next {
+        top: 40%;
+    }
+
+    .Category .con .item .type .img {
+        padding: unset;
+    }
+    .Category .con .item .type .img strong {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+@media (Max-width: 380px) {
+    .Category .con .item {
+        margin: 4px 0;
+    }
+    .Category .con .item .type .text {
+        max-height: 40px;
+    }
+    .Category .con .item .type .img {
+        min-height: 150px;
+    }
+    .Category .con .item .type .text strong {
+        font-size: 1rem;
+    }
+
+    .Category .con .item .type .manage .btn {
+        margin: 2px 0;
+    }
+    .Category .con .item .type .manage .btn button {
+        margin: 0 2px;
+    }
+
+    .Category .con .item .swiper-button-prev,
+    .Category .con .item .swiper-button-next {
+        width: 30px;
+        height: 30px;
+    }
+    .Category .con .item .swiper-button-prev::after,
+    .Category .con .item .swiper-button-next::after {
+        font-size: 1rem;
+    }
+
+    .Category .con .item .type .img .description p {
+        font-size: 12px;
+    }
+    .Category .con .item .type .img .description span {
+        font-size: 12px;
+    }
+}
