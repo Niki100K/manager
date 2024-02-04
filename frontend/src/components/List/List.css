@@ -1,0 +1,100 @@
+.List {
+    position: fixed;
+    display: none;
+    bottom: 1rem;
+    right: 0;
+    align-items: flex-end;
+    z-index: 1;
+    padding: 0 .5rem;
+}
+.List.show {
+    display: flex;
+}
+.List .circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: .5rem .5rem 4px;
+    background: var(--light3);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.List .box {
+    display: none;
+    background: var(--white1);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 1rem 4px;
+} 
+.List .box .hidden {
+    align-items: flex-start;
+    max-height: 560px;
+    overflow: auto !important;
+    flex-wrap: wrap;
+}
+.List .box .hidden::-webkit-scrollbar {
+    display: none;
+}
+.List .box.show {
+    display: flex;
+}
+.List .box .item {
+    background: var(--light4);
+    padding: 4px 0 0;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+    border-radius: .5rem;
+    margin-bottom: .5rem;
+}
+.List .box .item .header {
+    padding: 0 .5rem;
+    justify-content: space-between;
+    color: var(--white1);
+}
+.List .box .item .header p {
+    font-size: 20px;
+    font-family: var(--font2);
+}
+.List .box .item .earch {
+    margin-top: 4px;
+    padding: .5rem 0 0;
+    border-top: 2px solid var(--dark1);
+}
+.List .box .item .earch h3 {
+    width: 100%;
+    font-family: var(--font3);
+    margin-bottom: .5rem;
+    padding: 0 .5rem;
+}
+.List .box .item .earch .type {
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+.List .box .item .earch .type .info {
+    justify-content: space-between;
+    padding: 0 .5rem;
+}
+.List .box .item .earch .type p {
+    color: var(--dark1);
+    font-family: var(--font4);
+}
+.List .box .item .earch .type span {
+    color: var(--white1);
+    font-family: var(--font4);
+}
+.List .box .item .earch .type .btn {
+    justify-content: space-between;
+    margin: .5rem 0 2px;
+    padding: 4px 0;
+}
+.List .box .item .earch .type .btn .double {
+    width: unset;
+}
+.List .box .item .earch .type .btn button {
+    font-size: 14px;
+    padding: 4px 1rem;
+    margin: 0 4px;
+    background: var(--light3);
+    color: var(--white1);
+}
+.List .box .item .earch .type .btn .double button {
+    background: var(--light2);
+    color: var(--dark1);
+}

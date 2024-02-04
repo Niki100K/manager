@@ -5,6 +5,7 @@
 .Category .con {
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 4rem;
 }
 .Category .con .item {
     max-width: 18%;

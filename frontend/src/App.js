@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 
-import { Category, MainPage, Register } from './components'
+import { Category, MainPage, Register, List } from './components'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import { UserData } from './redux/UserData'
@@ -24,7 +24,7 @@ const App = () => {
           <Routes>
             <Route path='/' element={<MainPage />} />
             <Route path='/register' element={<Register />} />
-            <Route path='/:category' element={<Category />} />
+            <Route path='/:category' element={<><Category /><List /></>} />
           </Routes>
         </BrowserRouter>
       </StoreProvider>
