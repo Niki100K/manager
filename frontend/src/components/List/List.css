@@ -1,100 +1,136 @@
-.List {
+.List .background {
     position: fixed;
-    display: none;
-    bottom: 1rem;
-    right: 0;
-    align-items: flex-end;
+    top: 0;
+    height: 100%;
     z-index: 1;
-    padding: 0 .5rem;
 }
-.List.show {
-    display: flex;
+.List .total {
+    position: fixed;
+    bottom: 0;
+    align-items: flex-end;
+    padding: 0 .5rem .5rem;
+    z-index: 2;
 }
-.List .circle {
+.List .total .circle {
+    display: none;
     width: 50px;
     height: 50px;
-    border-radius: 50%;
-    margin: .5rem .5rem 4px;
-    background: var(--light3);
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 1rem;
+    cursor: pointer;
+    background: var(--light4);
+    color: var(--white4);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
 }
-.List .box {
+.List .total .circle.show {
+    display: flex;
+    animation: circle-animation  .6s ease 0s 1 normal;
+}
+@keyframes circle-animation {
+    0%{ opacity: 0; transform: scale(.3); }
+    50%{ opacity: 1; transform: scale(1.0); }
+    70%{ transform: scale(0.9); }
+    100%{ transform: scale(1); }
+    }
+.List .total .box {
     display: none;
-    background: var(--white1);
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
-    padding: 1rem 4px;
-} 
-.List .box .hidden {
-    align-items: flex-start;
-    max-height: 560px;
-    overflow: auto !important;
-    flex-wrap: wrap;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+    background: var(--white4);
 }
-.List .box .hidden::-webkit-scrollbar {
-    display: none;
-}
-.List .box.show {
+.List .total .box.show {
     display: flex;
 }
-.List .box .item {
+.List .total .box .header {
+    justify-content: space-between;
+    padding: 1rem .5rem .5rem;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
     background: var(--light4);
-    padding: 4px 0 0;
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
-    border-radius: .5rem;
     margin-bottom: .5rem;
 }
-.List .box .item .header {
-    padding: 0 .5rem;
-    justify-content: space-between;
-    color: var(--white1);
+.List .total .box .header .manage {
+    width: unset;
+    padding: 4px .5rem;
+    border-radius: .5rem;
+    justify-content: flex-start;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+    color: var(--white4);
 }
-.List .box .item .header p {
+.List .total .box .header .manage #trash {
+    margin-right: 4px;
+}
+.List .total .box .con {
+    max-height: 400px;
+    overflow: auto;
+    top: 0;
+    flex-wrap: wrap;
+    margin-bottom: .5rem;
+}
+.List .total .box .con::-webkit-scrollbar {
+    display: none;
+}
+/* box-shadow: 0px 0px 5px 1px rgba(204,204,204,1); */
+
+
+.List .total .box .con .category {
+    width: 95%;
+    padding: 1rem 4px 0;
+    margin-bottom: .5rem;
+    background: var(--white4);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.List .total .box .con .category .name {
+    justify-content: space-between;
+    padding: 4px .5rem;
+    border-radius: .5rem;
+    background: var(--light3);
+    color: var(--white1);
+    margin-bottom: .5rem;
+}
+.List .total .box .con .category .name h2 {
     font-size: 20px;
     font-family: var(--font2);
 }
-.List .box .item .earch {
-    margin-top: 4px;
-    padding: .5rem 0 0;
-    border-top: 2px solid var(--dark1);
-}
-.List .box .item .earch h3 {
-    width: 100%;
-    font-family: var(--font3);
+.List .total .box .con .category .item {
+    background: var(--light4);
     margin-bottom: .5rem;
-    padding: 0 .5rem;
+    border-radius: .5rem;
 }
-.List .box .item .earch .type {
+.List .total .box .con .category .item .text {
     justify-content: space-between;
-    margin-bottom: 2px;
+    padding: 4px .5rem 4px;
+    border-bottom: 2px solid var(--dark1);
+    color: var(--white1);
 }
-.List .box .item .earch .type .info {
-    justify-content: space-between;
-    padding: 0 .5rem;
+.List .total .box .con .category .item .text h4 {
+    font-family: var(--font2);
 }
-.List .box .item .earch .type p {
+.List .total .box .con .category .item .text #trash {
     color: var(--dark1);
-    font-family: var(--font4);
 }
-.List .box .item .earch .type span {
-    color: var(--white1);
-    font-family: var(--font4);
+.List .total .box .con .category .item .volume {
+    align-items: flex-start;
+    padding-bottom: 4px;
 }
-.List .box .item .earch .type .btn {
+.List .total .box .con .category .item .volume .info {
     justify-content: space-between;
-    margin: .5rem 0 2px;
-    padding: 4px 0;
+    padding: 0 .5rem;
 }
-.List .box .item .earch .type .btn .double {
-    width: unset;
+.List .total .box .con .category .item .volume p {
+    font-family: var(--font3);
+    color: var(--dark1);
 }
-.List .box .item .earch .type .btn button {
-    font-size: 14px;
-    padding: 4px 1rem;
-    margin: 0 4px;
-    background: var(--light3);
-    color: var(--white1);
+.List .total .box .con .category .item .volume span {
+    font-family: var(--font4);
+    color: var(--light2);
 }
-.List .box .item .earch .type .btn .double button {
+
+
+.List .total .box .con .btn {
+    width: 90%;
+}
+.List .total .box .con .btn button {
+    width: 100%;
+    margin: unset;
     background: var(--light2);
-    color: var(--dark1);
+    color: var(--white1);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
 }

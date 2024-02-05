@@ -1,13 +1,10 @@
-import React, { useContext, useState } from 'react';
-import './List.css';
-
-import { Store } from '../../Store';
-import CategoryJS from '../Category/CategoryJS'
+import React, { useContext, useState } from 'react'
+import './List.css'
+import { FaTrashAlt } from "react-icons/fa";
+import {Store} from '../../Store'
 const List = () => {
-  const {handleManage} = CategoryJS()
-  const { storeData } = useContext(Store);
-  const [show, setShow] = useState(false);
-
+  const {storeData, setStoreData} = useContext(Store)
+  const [show, setShow] = useState(false)
   let totalVolume = 0;
   Object.keys(storeData).forEach((categoryName) => {
     Object.keys(storeData[categoryName]).forEach((itemName) => {
@@ -16,45 +13,68 @@ const List = () => {
       });
     });
   });
+  
+  const background = () => {
+    return (
+      <div onClick={() => setShow(!show)} className='background c'>
 
-  return (
-    <div className={`List ${totalVolume > 0 && 'show'} c flex-c`}>
-      <div onClick={() => setShow(!show)} className='circle c'>
-        <p>{totalVolume}</p>
       </div>
-      <div className={`box ${show && 'show'} c r`}>
-        <div className='hidden c r'>
-          {Object.keys(storeData).map((categoryName, indexCategory) => (
-            <div className='item c r flex-c' key={indexCategory}>
-              <div className='header c'>
-                <p>{categoryName}</p>
+    )
+  }
+
+  const total = () => {
+    return (
+      <div className='total c flex-c'>
+        <div onClick={() => setShow(!show)} className={`circle ${totalVolume && 'show'} c r`}>
+          <h1>{totalVolume}</h1>
+        </div>
+        {show &&
+          <div className={`box ${totalVolume && 'show'} c r flex-c`}>
+            <div className='header c'>
+              <div className='manage c'>
+                <FaTrashAlt onClick={() => setStoreData({})} id='trash'/>
+                <p>Delete</p>
               </div>
-              {Object.keys(storeData[categoryName]).map((itemName, indexItem) => (
-                <div className='earch c flex-c' key={indexItem}>
-                  <h3>{itemName}</h3>
-                  {Object.keys(storeData[categoryName][itemName]).map((volume, indexVolume) => (
-                    <div className='type c flex-c' key={indexVolume}>
-                      <div className='info c'>
-                        <p>{volume}</p>
-                        <span>{storeData[categoryName][itemName][volume]}</span>
+            </div>
+            <div className='con c r'>
+              {Object.keys(storeData).map((keys, index) => (
+                <div className='category c r flex-c' key={index}>
+                  <div className='name c r'>
+                    <h2>{keys}</h2>
+                  </div>
+                  {Object.keys(storeData[keys]).map((item, indexItem) => (
+                    <div className='item c r flex-c' key={indexItem}>
+                      <div className='text c'>
+                        <h4>{item}</h4>
+                        <FaTrashAlt id='trash'/>
                       </div>
-                      <div className='btn c'>
-                        <div className='double c'>
-                          <button onClick={() => handleManage(categoryName, itemName, volume, 'add', 1)}>+1</button>
-                          <button onClick={() => handleManage(categoryName, itemName, volume, 'remove', 1)}>-1</button>
+                      {Object.keys(storeData[keys][item]).map((volume, indexVolume) => (
+                        <div className='volume c flex-c' key={indexVolume}>
+                          <div className='info c'>
+                            <p>{volume}</p>
+                            <span>{storeData[keys][item][volume]}</span>
+                          </div>
                         </div>
-                        <button onClick={() => handleManage(categoryName, itemName, volume, 'clear')}>Remove</button>
-                      </div>
+                      ))}
                     </div>
                   ))}
                 </div>
               ))}
+              <div className='btn c'>
+                <button>Finish Order</button>
+              </div>
             </div>
-          ))}
-        </div>
+          </div>
+        }
       </div>
+    )
+  }
+  return (
+    <div className='List c'>
+      {show && background()}
+      {total()}
     </div>
-  );
+  )
 }
 
-export default List;
+export default List
