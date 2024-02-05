@@ -1,8 +1,12 @@
 .List .background {
     position: fixed;
+    display: none;
     top: 0;
     height: 100%;
     z-index: 1;
+}
+.List .background.show {
+    display: flex;
 }
 .List .total {
     position: fixed;
@@ -34,7 +38,7 @@
 .List .total .box {
     display: none;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
-    background: var(--white4);
+    background: var(--white1);
 }
 .List .total .box.show {
     display: flex;
@@ -43,8 +47,8 @@
     justify-content: space-between;
     padding: 1rem .5rem .5rem;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
-    background: var(--light4);
     margin-bottom: .5rem;
+    background: var(--white4);
 }
 .List .total .box .header .manage {
     width: unset;
@@ -52,7 +56,6 @@
     border-radius: .5rem;
     justify-content: flex-start;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
-    color: var(--white4);
 }
 .List .total .box .header .manage #trash {
     margin-right: 4px;
@@ -71,40 +74,44 @@
 
 
 .List .total .box .con .category {
-    width: 95%;
+    width: 100%;
     padding: 1rem 4px 0;
     margin-bottom: .5rem;
-    background: var(--white4);
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+    background: var(--light4);
 }
 .List .total .box .con .category .name {
     justify-content: space-between;
     padding: 4px .5rem;
     border-radius: .5rem;
-    background: var(--light3);
-    color: var(--white1);
     margin-bottom: .5rem;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
 }
 .List .total .box .con .category .name h2 {
     font-size: 20px;
     font-family: var(--font2);
+    color: var(--light2 );
 }
 .List .total .box .con .category .item {
-    background: var(--light4);
     margin-bottom: .5rem;
     border-radius: .5rem;
 }
 .List .total .box .con .category .item .text {
     justify-content: space-between;
-    padding: 4px .5rem 4px;
-    border-bottom: 2px solid var(--dark1);
-    color: var(--white1);
+    padding: 4px;
+    border-bottom: 2px solid var(--white4);
 }
 .List .total .box .con .category .item .text h4 {
-    font-family: var(--font2);
+    font-family: var(--font4);
+    color: var(--white4);
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+    padding: 2px 4px;
+    border-radius: .5rem;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
 }
 .List .total .box .con .category .item .text #trash {
-    color: var(--dark1);
+    color: var(--dark4);
 }
 .List .total .box .con .category .item .volume {
     align-items: flex-start;
@@ -112,17 +119,45 @@
 }
 .List .total .box .con .category .item .volume .info {
     justify-content: space-between;
-    padding: 0 .5rem;
+    padding: 2px 4px;
 }
 .List .total .box .con .category .item .volume p {
     font-family: var(--font3);
-    color: var(--dark1);
+    color: var(--white1);
+    letter-spacing: 1px;
 }
-.List .total .box .con .category .item .volume span {
-    font-family: var(--font4);
+.List .total .box .con .category .item .volume .values {
+    width: unset;
+}
+.List .total .box .con .category .item .volume .values span {
     color: var(--light2);
 }
-
+.List .total .box .con .category .item .volume .values .pen {
+    width: 25px;
+    height: 25px;
+    background: var(--white4);
+    margin: 0 4px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.List .total .box .con .category .item .volume .values #pen {
+    color: var(--light4);
+}
+.List .total .box .con .category .item .volume .btns {
+    margin-top: 4px;
+}
+.List .total .box .con .category .item .volume .btns button {
+    width: 100%;
+    margin: 0 4px;
+    padding: 2px;
+    color: var(--white1);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.List .total .box .con .category .item .volume .btns button:nth-child(3) {
+    background: var(--light3);
+}
+.List .total .box .con .category .item .volume .btns button:nth-child(4) {
+    background: var(--middle1);
+}
 
 .List .total .box .con .btn {
     width: 90%;
@@ -130,7 +165,7 @@
 .List .total .box .con .btn button {
     width: 100%;
     margin: unset;
-    background: var(--light2);
-    color: var(--white1);
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+    background: var(--light5);
+    color: var(--white1);
 }

@@ -1,10 +1,13 @@
 import React, { useContext, useState } from 'react'
 import './List.css'
-import { FaTrashAlt } from "react-icons/fa";
+import { FaTrashAlt, FaPen } from "react-icons/fa";
 import {Store} from '../../Store'
+import CategoryJS from '../Category/CategoryJS';
 const List = () => {
+  const {handleManage} = CategoryJS()
   const {storeData, setStoreData} = useContext(Store)
   const [show, setShow] = useState(false)
+  const [showSettings, setShowSettings] = useState([])
   let totalVolume = 0;
   Object.keys(storeData).forEach((categoryName) => {
     Object.keys(storeData[categoryName]).forEach((itemName) => {
@@ -13,10 +16,17 @@ const List = () => {
       });
     });
   });
+  const handleSettings = (keys, item, volume) => {
+    if (showSettings[0] === keys && showSettings[1] === item && showSettings[2] === volume) {
+      setShowSettings([])
+    } else {
+      setShowSettings([keys, item, volume])
+    }
+  }
   
   const background = () => {
     return (
-      <div onClick={() => setShow(!show)} className='background c'>
+      <div onClick={() => setShow(!show)} className={`background ${totalVolume && 'show'} c`}>
 
       </div>
     )
@@ -43,17 +53,29 @@ const List = () => {
                     <h2>{keys}</h2>
                   </div>
                   {Object.keys(storeData[keys]).map((item, indexItem) => (
-                    <div className='item c r flex-c' key={indexItem}>
+                    <div className='item c flex-c' key={indexItem}>
                       <div className='text c'>
                         <h4>{item}</h4>
-                        <FaTrashAlt id='trash'/>
                       </div>
                       {Object.keys(storeData[keys][item]).map((volume, indexVolume) => (
                         <div className='volume c flex-c' key={indexVolume}>
                           <div className='info c'>
                             <p>{volume}</p>
-                            <span>{storeData[keys][item][volume]}</span>
+                            <div className='values c'>
+                              <span>{storeData[keys][item][volume]}</span>
+                              <div className='pen c r'>
+                                <FaPen onClick={() => handleSettings(keys, item, volume)} id='pen'/>
+                              </div>
+                            </div>
                           </div>
+                          {(showSettings[0] === keys && showSettings[1] === item && showSettings[2] === volume) && (
+                            <div className='btns c'>
+                              <button onClick={() => handleManage(keys, item, volume, 'add', 1)}>+1</button>
+                              <button onClick={() => handleManage(keys, item, volume, 'remove', 1)}>-1</button>
+                              <button onClick={() => handleManage(keys, item, volume, 'clear', )}>Delete</button>
+                              <button onClick={() => handleSettings(keys, item, volume)}>Close</button>
+                            </div>
+                          )}
                         </div>
                       ))}
                     </div>
